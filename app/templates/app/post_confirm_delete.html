@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<h1>Confirmar exclusão de post </h1>
+<p>Deseja excluir o post {{ post.title }}?</p>
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <button class="btn btn-danger" type="submit">Sim, deletar</button>
+        <a href="javascript:history.back()" class="btn btn-default">Não, voltar a página anterior.</a>
+    </div>
+</form>
+
+{% endblock %}

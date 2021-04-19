@@ -1,0 +1,8 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<h1>Post: {{ post.title }}</h1>
+<h2>Escrito por {{ post.user.username }} em {{ post.date }}</h2>
+<div>
+    {{ post.content }}
+</div>
+{% endblock %}
